@@ -1,5 +1,22 @@
 #!/bin/bash
 
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+  echo -e "
+Usage: ./upload_dir.sh [directory]
+
+Description:
+  Lists and uploads files from the specified directory (or the current directory if none is specified) to a Backblaze B2 bucket.
+
+Arguments:
+  directory  - The directory of files you want to upload. If not provided, the current directory is used.
+
+Environment Variables:
+  B2_BUCKET_NAME - The name of the B2 bucket where files will be uploaded. Must be set before running the script.
+"
+  exit 0
+fi
+
+
 # b2 bucket name
 b2_bucket_name="${B2_BUCKET_NAME}"
 

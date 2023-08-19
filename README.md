@@ -8,6 +8,7 @@ Command Utilities for Backblaze B2 File store Native API
 For upload_dir.sh:
 - set the account id env var: `export B2_ACCOUNT_ID="your_account_id"`
 - set the application key env var: `export B2_APPLICATION_KEY="your_application_key"`
+- authorize the account: `b2 authorize-account`
 - set the bucket name env var: `export B2_BUCKET_NAME="your_bucket_name"` 
 - chmod +x upload_dir.sh
 
